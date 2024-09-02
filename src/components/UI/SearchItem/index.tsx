@@ -13,6 +13,7 @@ const SearchItems: FC<SortItemProps> = ({ sortList }) => {
     const handleSortChange = (newSortType: keyof User) => {
         setSortType(newSortType);
         setIsVisible(false);
+        inputRef.current?.focus();
     };
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const dispath = useAppDispatch();

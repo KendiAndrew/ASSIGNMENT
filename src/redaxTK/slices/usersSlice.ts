@@ -50,7 +50,7 @@ const usersSlice = createSlice({
                 state.users = state.preUsers;
             } else {
                 state.users = state.preUsers.filter((item: User) =>
-                    item[key].toString().toLowerCase().includes(query.toLowerCase()),
+                    item[key].toString().toLowerCase().startsWith(query.toLowerCase()),
                 );
             }
         },
